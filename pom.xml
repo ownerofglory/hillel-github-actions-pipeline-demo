@@ -21,11 +21,6 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.ownerofglory</groupId>
-            <artifactId>hillel-maven-lib</artifactId>
-            <version>1.0-20230210.154200-2</version>
-        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -34,25 +29,9 @@
             <scope>test</scope>
         </dependency>
 
-
-
     </dependencies>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>nexus-ownerofglory</id>
-            <url>https://nexus.ownerofglory.com/repository/hillel</url>
-        </snapshotRepository>
-    </distributionManagement>
 
-    <repositories>
-        <repository>
-            <id>nexus-ownerofglory</id>
-            <name>Nexus Private Maven Repo</name>
-            <url>https://nexus.ownerofglory.com/repository/hillel</url>
-        </repository>
-
-    </repositories>
 
     <build>
         <plugins>
