@@ -13,7 +13,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Compile project
-        run: mvn --batch-mode compile
+        run: ./mvnw --batch-mode compile
 
   test:
     needs: compile
@@ -26,7 +26,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Test project
-        run: mvn --batch-mode test
+        run: ./mvnw --batch-mode test
 
   build:
     needs: test
@@ -39,5 +39,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build project
-        run: mvn --batch-mode package
+        run: ./mvnw --batch-mode package
 

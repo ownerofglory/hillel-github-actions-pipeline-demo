@@ -6,12 +6,9 @@
 
     <groupId>ua.hillel</groupId>
     <artifactId>hillel-maven-example</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>hillel-maven-example-jdbc</module>
-        <module>hille-mavem-example-ui</module>
-    </modules>
+
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -20,15 +17,12 @@
     </properties>
 
     <dependencies>
-
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.9.0</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
 
@@ -53,6 +47,12 @@
                     <skipStaging>true</skipStaging>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M9</version>
+            </plugin>
+
         </plugins>
     </build>
 

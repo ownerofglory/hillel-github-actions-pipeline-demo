@@ -1,12 +1,13 @@
 package ua.hillel.example.calc;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
     private Calculator calculator;
 
-    @BeforeAll
+    @BeforeEach
     public void setUp() {
         calculator = new Calculator();
     }
@@ -18,7 +19,7 @@ public class CalculatorTest {
         double expected = 30;
         double actual = calculator.add(a, b);
 
-        assert expected == actual;
+        Assertions.assertEquals(expected, actual);
     }
 
 
@@ -29,6 +30,6 @@ public class CalculatorTest {
         double expected = -10;
         double actual = calculator.subtract(a, b);
 
-        assert expected == actual;
+        Assertions.assertEquals(expected, actual);
     }
 }
